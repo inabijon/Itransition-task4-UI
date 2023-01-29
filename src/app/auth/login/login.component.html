@@ -1,0 +1,28 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form #login="ngForm" (ngSubmit)="loginForm(login)">
+                <h2 class="text-center text-uppercase mb-4">Login</h2>
+
+                <h6 class="text-danger">{{ error }}</h6>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="email">Email address</label>
+                    <input type="email" id="email" name="email" autocomplete="off" class="form-control" #email="ngModel"
+                        ngModel />
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" id="password" autocomplete="off" class="form-control" name="password"
+                        #password="ngModel" ngModel />
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+                <div class="text-center">
+                    <p>Not a member? <a routerLink="/auth/signup">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
